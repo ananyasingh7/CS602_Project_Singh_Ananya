@@ -1,0 +1,60 @@
+{
+    "orders": [
+        {
+            "_id": 1001,
+            "customer": {
+                "_id": 1,
+                "name": "Alice Johnson",
+                "email": "alice.johnson@example.com",
+                "password": "hashed_password_001"
+            },
+            "products": [
+                {
+                    "_id": 1,
+                    "name": "Laptop Stand",
+                    "description": "Adjustable aluminum laptop stand.",
+                    "price": 39.99,
+                    "quantity_in_stock": 120
+                },
+                {
+                    "_id": 2,
+                    "name": "Wireless Earbuds",
+                    "description": "True wireless earbuds with noise isolation.",
+                    "price": 49.99,
+                    "quantity_in_stock": 150
+                }
+            ],
+            "total_price": 139.97,
+            "status": "Pending",
+            "createdAt": "2025-02-25T12:00:00Z"
+        },
+        {
+            "_id": 1002,
+            "customer": {
+                "_id": 2,
+                "name": "Bob Williams",
+                "email": "bob.williams@example.com",
+                "password": "hashed_password_002"
+            },
+            "products": [
+                {
+                    "_id": 3,
+                    "name": "Gaming Mouse",
+                    "description": "High-precision gaming mouse with RGB lighting.",
+                    "price": 29.99,
+                    "quantity_in_stock": 200
+                },
+                {
+                    "_id": 4,
+                    "name": "Mechanical Keyboard",
+                    "description": "RGB backlit mechanical keyboard.",
+                    "price": 79.99,
+                    "quantity_in_stock": 60
+                }
+            ],
+            "total_price": 109.98,
+            "status": "Shipped",
+            "createdAt": "2025-02-24T10:30:00Z"
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/public/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Ananya's shopping cart application</h1>
+        {{#unless isLoginPage}}
+            {{#if isAdmin}}
+            {{else}}
+                <nav>
+                    <a href="/products">Products</a> | 
+                    <a href="/orders/history">View Past Orders</a> |
+                    <a href="/auth/logout">Logout</a>
+                </nav>
+            {{/if}}
+        {{/unless}}
+    </header>
+
+    <main>
+        {{{body}}}
+    </main>
+</body>
+
+</html>

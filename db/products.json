@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "_id": 1,
+      "name": "Laptop Stand",
+      "description": "Adjustable aluminum laptop stand.",
+      "price": 39.99,
+      "quantity_in_stock": 120
+    },
+    {
+      "_id": 2,
+      "name": "Wireless Earbuds",
+      "description": "True wireless earbuds with noise isolation.",
+      "price": 49.99,
+      "quantity_in_stock": 150
+    },
+    {
+      "_id": 3,
+      "name": "Gaming Mouse",
+      "description": "High-precision gaming mouse with RGB lighting.",
+      "price": 29.99,
+      "quantity_in_stock": 200
+    },
+    {
+      "_id": 4,
+      "name": "Mechanical Keyboard",
+      "description": "RGB backlit mechanical keyboard.",
+      "price": 79.99,
+      "quantity_in_stock": 60
+    }
+  ]
+}

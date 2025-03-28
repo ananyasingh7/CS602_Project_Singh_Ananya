@@ -1,0 +1,18 @@
+{
+    "admins": [
+        {
+            "_id": 1,
+            "name": "John Doe",
+            "email": "admin@example.com",
+            "password": "hashed_password_123",
+            "role": "superadmin"
+        },
+        {
+            "_id": 2,
+            "name": "Jane Smith",
+            "email": "admin2@example.com",
+            "password": "hashed_password_456",
+            "role": "manager"
+        }
+    ]
+}

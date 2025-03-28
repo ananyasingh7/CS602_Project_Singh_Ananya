@@ -1,0 +1,32 @@
+<h2>Order History</h2>
+
+{{#if orders.length}}
+<ul style="list-style-type: none; padding: 0;">
+    {{#each orders}}
+    <li style="margin-bottom: 30px; border: 1px solid #ddd; padding: 15px; border-radius: 5px;">
+        <h3>Order #{{this._id}}</h3>
+
+        <p><strong>Date:</strong> {{this.createdAt}}</p>
+        <p><strong>Total:</strong> ${{this.total_price}}</p>
+        <p><strong>Status:</strong> {{this.status}}</p>
+
+        <h4>Products:</h4>
+        {{#if this.products.length}}
+        <ul>
+            {{#each this.products}}
+            <li>
+                <strong>{{this.name}}</strong> -
+                Quantity: {{this.quantity}} -
+                Price: ${{this.price}}
+            </li>
+            {{/each}}
+        </ul>
+        {{else}}
+        <p>No product details available</p>
+        {{/if}}
+    </li>
+    {{/each}}
+</ul>
+{{else}}
+<p>You haven't placed any orders yet. <a href="/products">Shop now!</a></p>
+{{/if}}

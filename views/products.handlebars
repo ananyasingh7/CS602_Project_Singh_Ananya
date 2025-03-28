@@ -1,0 +1,33 @@
+<h2>Available Products</h2>
+
+{{#if success}}
+<div style="background-color: #dff0d8; color: #3c763d; padding: 15px; margin-bottom: 20px; border: 1px solid #d6e9c6; border-radius: 4px;">
+  <strong>Success!</strong> {{successMessage}}
+</div>
+{{/if}}
+
+<form action="/products/search" method="GET">
+  <input type="text" name="query" placeholder="Search by name or description" value="{{query}}">
+  <input type="number" name="minPrice" placeholder="Min Price" value="{{minPrice}}">
+  <input type="number" name="maxPrice" placeholder="Max Price" value="{{maxPrice}}">
+  <button type="submit">Search</button>
+  <button type="button" onclick="window.location='/products'">Reset</button>
+</form>
+
+<form action="/orders/place" method="POST">
+  <input type="hidden" name="customerId" value="1">
+  
+  <ul>
+    {{#each products}}
+    <li>
+      <input type="checkbox" name="productIds" value="{{this._id}}">
+      <strong>{{this.name}}</strong> - ${{this.price}}
+      ({{this.quantity_in_stock}} available)
+      <br>
+      <small>{{this.description}}</small><br>
+      Quantity: <input type="number" name="quantities[]" min="1" max="{{this.quantity_in_stock}}" value="1">
+    </li>
+    {{/each}}
+  </ul>
+  <button type="submit">Place Order</button>
+</form>
